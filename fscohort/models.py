@@ -5,7 +5,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length=30)
     number = models.IntegerField()
     about_me = models.TextField(null=True, blank=True) # null=True, blank=True=> null veya boş olursa hata veremeyecek.
-    image = models.ImageField(null=True, blank=True, upload_to='media/') # images db'e yüklenmez.Sadece ismi görüntülenir.Static files db'e yüklenmiyor.
+    image = models.ImageField(null=True, blank=True, upload_to='media/') # images db'e yüklenmez.Sadece ismi görüntülenir.Static files db'e yüklenmiyor.(pip install Pillow)
     register_date = models.DateTimeField(auto_now_add=True)
     last_update_date = models.DateTimeField(auto_now=True)
     
